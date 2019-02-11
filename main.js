@@ -1,4 +1,4 @@
-playerOneButton = document.querySelector( "#playerOneButton" );
+var playerOneButton = document.querySelector( "#playerOneButton" );
 playerOneButton.addEventListener( "click", function () {
     updateScore( "playerOne" )
 } );
@@ -16,7 +16,12 @@ resetButton.addEventListener( "click", function () {
 var maxScoreInput = document.querySelector( "#maxScoreInput" ),
     maxScoreDisplay = document.querySelector( "#maxScore" );
 maxScoreInput.addEventListener( "change", function () {
-    setMaxScore( maxScoreInput.value );
+    if ( playerOneScore !== 0 || playerOneScore !== 0 ) {
+        reset();
+    } else {
+        setMaxScore( Number( maxScoreInput.value ) );
+    }
+
 } );
 
 var playerOneScore = 0,
@@ -41,7 +46,7 @@ function updateScore( player ) {
     }
 }
 
-// Updating the the display to of player score
+// Updating the the display of player score
 function updateScoreDisplay( player ) {
     if ( player === "playerOne" ) {
         console.log( "Player One Score: " + playerOneScore );
@@ -60,7 +65,7 @@ function setMaxScore( maxScoreValue ) {
 
 // determines if the game is over or not
 function gameOver() {
-    return playerOneScore == maxScoreInput.value || playerTwoScore == maxScoreInput.value;
+    return playerOneScore === Number( maxScoreInput.value ) || playerTwoScore === Number( maxScoreInput.value );
 }
 
 // change the color of the victors score to green
@@ -79,4 +84,6 @@ function reset() {
     updateScoreDisplay( "playerOne" );
     updateScoreDisplay( "playerTwo" );
     setMaxScore( 5 );
+    playerOneScoreDisplay.classList.remove( "winner" );
+    playerTwoScoreDisplay.classList.remove( "winner" );
 }
