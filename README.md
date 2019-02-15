@@ -1,2 +1,6 @@
 # score-keeper
-A simple score keeping app, best 2 out of 3 style
+A simple score keeping app, best 2 out of 3 style.
+
+You can see a working version here:
+
+https://geekpulp.co.nz/apps/score-keeper/scoreKeeper.htm
