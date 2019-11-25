@@ -1,5 +1,5 @@
 # Score Keeper
-A simple score keeping app for two players. You can use the app here: https://geekpulp.co.nz/apps/score-keeper/scoreKeeper.htm
+A simple score keeping app for two players. You can use the app here: https://geekpulp.co.nz/apps/score-keeper/scoreKeeper.html
 
 ## How you can help
 * If you find something wrong you can [submit a bug](https://github.com/geekpulp/score-keeper/issues/new?assignees=&labels=&template=bug_report.md&title=)
